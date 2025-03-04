@@ -33,6 +33,7 @@ func loadTokenizeCases(t *testing.T) []tokenizeCase {
 	// err = toml.Unmarshal(data, &testCases)
 	_, err := toml.DecodeFile("testdata/tokenize_cases.toml", &testCases)
 	require.NoError(t, err, "Unmarshal TOML")
+	t.Log(testCases)
 	return testCases.Cases
 }
 
