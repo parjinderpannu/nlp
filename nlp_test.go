@@ -14,11 +14,20 @@ var tokenizeCases = []struct { // anonymous struct
 	{"", nil},
 }
 
+type tokenizeCase struct {
+	Text   string
+	Tokens []string
+}
+
+func loadTokenizeCases(t *testing.T) []tokenizeCase {
+
+}
+
 func TestTokenizeTable(t *testing.T) {
-	for _, tc := range tokenizeCases {
-		t.Run(tc.text, func(t *testing.T) {
-			tokens := Tokenize(tc.text)
-			require.Equal(t, tc.tokens, tokens)
+	for _, tc := range loadTokenizeCases(t) {
+		t.Run(tc.Text, func(t *testing.T) {
+			tokens := Tokenize(tc.Text)
+			require.Equal(t, tc.Tokens, tokens)
 		})
 	}
 }
