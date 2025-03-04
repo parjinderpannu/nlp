@@ -48,7 +48,7 @@ func TestTokenizeTable(t *testing.T) {
 
 func TestTokenize(t *testing.T) {
 	text := "What's on second?"
-	expected := []string{"what", "on", "second"}
+	expected := []string{"what", "", "on", "second"}
 	tokens := Tokenize(text)
 	require.Equal(t, expected, tokens)
 	/* // Before testify

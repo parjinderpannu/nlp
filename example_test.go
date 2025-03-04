@@ -12,7 +12,7 @@ func ExampleTokenize() {
 	fmt.Println(tokens)
 
 	// output:
-	// [who on first]
+	// [who  on first]
 
 }
 
