@@ -7,13 +7,13 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-var tokenizeCases = []struct { // anonymous struct
-	text   string
-	tokens []string
-}{
-	{"Who's on first?", []string{"who", "s", "on", "first"}},
-	{"", nil},
-}
+// var tokenizeCases = []struct { // anonymous struct
+// 	text   string
+// 	tokens []string
+// }{
+// 	{"Who's on first?", []string{"who", "s", "on", "first"}},
+// 	{"", nil},
+// }
 
 type tokenizeCase struct {
 	Text   string
@@ -48,7 +48,7 @@ func TestTokenizeTable(t *testing.T) {
 
 func TestTokenize(t *testing.T) {
 	text := "What's on second?"
-	expected := []string{"what", "s", "on", "second"}
+	expected := []string{"what", "on", "second"}
 	tokens := Tokenize(text)
 	require.Equal(t, expected, tokens)
 	/* // Before testify

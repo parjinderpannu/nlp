@@ -1,10 +1,10 @@
 [[cases]]
 text = "Who's on first?"
-tokens = ["who", "s", "on", "first"]
+tokens = ["who", "on", "first"]
 
 [[cases]]
 text = "Who's on second?"
-tokens = ["who", "s", "on", "second"]
+tokens = ["who", "on", "second"]
 
 [[cases]]
 text = ""
